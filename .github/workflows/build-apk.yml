@@ -20,8 +20,8 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Installer Android SDK
-        uses: android-actions/setup-android@v3
+      - name: Accepter les licences Android SDK
+        run: yes | /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager --licenses || true
 
       - name: Installer Gradle
         uses: gradle/actions/setup-gradle@v4
